@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
-export const ImageGridWrapper = styled.main`
-  display: flex;
-  justify-content: space-between;
+export const Grid = styled.main`
   grid-area: main;
-  background-color: lightskyblue;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
   width: 100%;
-  padding: 0 2rem;
 `;
 
-export const ImageGrid = styled.div`
-  display: grid;
-  max-width: 100%;
+export const Image = styled.div`
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5/8;
+  background-color: white;
 `;

@@ -5,6 +5,6 @@ export const HeaderWrapper = styled.header`
   justify-content: space-between;
   grid-area: header;
   padding: 1rem 2rem;
-  background-color: cadetblue;
-  width: 100%;
+  margin: 0rem 12rem 2rem 12rem;
+  border-bottom: 1px solid grey; // trocar cor
 `;

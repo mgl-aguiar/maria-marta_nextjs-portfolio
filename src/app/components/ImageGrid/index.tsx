@@ -1,14 +1,19 @@
 'use client';
 
 import React from 'react';
-import { ImageGridWrapper, ImageGrid } from './ImageGrid.styles';
+import { Grid, Image } from './ImageGrid.styles';
 
-const Header = () => {
+const ImageGrid = () => {
   return (
-    <ImageGridWrapper>
-      <ImageGrid />
-    </ImageGridWrapper>
+    <Grid>
+      <Image />
+      <Image />
+      <Image />
+      <Image />
+      <Image />
+      <Image />
+    </Grid>
   );
 };
 
-export default Header;
+export default ImageGrid;

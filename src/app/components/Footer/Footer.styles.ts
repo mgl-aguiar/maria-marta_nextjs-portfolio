@@ -2,9 +2,8 @@ import styled from 'styled-components';
 
 export const FooterWrapper = styled.footer`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   grid-area: footer;
-  padding: 1rem 2rem;
-  background-color: gainsboro;
-  width: 100%;
+  margin: 6rem 12rem 0 12rem;
+  border-top: 1px solid grey; // trocar cor
 `;

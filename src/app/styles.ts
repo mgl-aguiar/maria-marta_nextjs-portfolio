@@ -4,14 +4,13 @@ import styled from 'styled-components';
 
 export const HomeWrapper = styled.div`
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 10rem auto 8rem;
-  row-gap: 2rem;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 10rem auto 16rem;
   grid-template-areas:
-    'header'
-    'main'
-    'footer';
-  height: 100vh;
+    'header header header'
+    '. main .'
+    'footer footer footer';
+  min-height: 100vh;
   width: 100%;
-  background-color: offwhite;
+  background-color: whitesmoke; // placeholder
 `;
