@@ -1,12 +1,10 @@
-import type { Metadata } from 'next';
+'use client';
+
+import { ThemeProvider } from 'styled-components';
 import StyledComponentsRegistry from './lib/registry';
 
-import './globals.css';
-
-export const metadata: Metadata = {
-  title: 'Maria Marta',
-  description: "The artists' portfolio",
-};
+import { theme } from './styles/theme';
+import './styles/globals.css';
 
 export default function RootLayout({
   children,
@@ -16,7 +14,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <ThemeProvider theme={theme}>
+          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        </ThemeProvider>
       </body>
     </html>
   );
