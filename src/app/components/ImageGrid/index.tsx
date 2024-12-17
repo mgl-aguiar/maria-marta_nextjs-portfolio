@@ -6,12 +6,12 @@ import { Grid, Image } from './ImageGrid.styles';
 const ImageGrid = () => {
   return (
     <Grid>
-      <Image />
-      <Image />
-      <Image />
-      <Image />
-      <Image />
-      <Image />
+      <Image alt="" />
+      <Image alt="" />
+      <Image alt="" />
+      <Image alt="" />
+      <Image alt="" />
+      <Image alt="" />
     </Grid>
   );
 };
