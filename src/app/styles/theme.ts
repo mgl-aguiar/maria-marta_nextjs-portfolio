@@ -2,6 +2,7 @@ export const theme = {
   breakpoints: {
     tablet: '768px',
     desktop: '1024px',
+    largeDesktop: '1440px',
   },
   fontSizes: {
     xs: '0.75rem', // 12px
