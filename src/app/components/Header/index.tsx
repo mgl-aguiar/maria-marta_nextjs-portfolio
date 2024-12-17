@@ -4,17 +4,23 @@ import React from 'react';
 import {
   HeaderWrapper,
   LogoWrapper,
-  NavigationWrapper,
-  NavigationItem,
+  NavWrapper,
+  NavLink,
+  Logo,
 } from './Header.styles';
 
 const Header = () => (
   <HeaderWrapper>
-    <LogoWrapper>Logo</LogoWrapper>
-    <NavigationWrapper>
-      <NavigationItem>about</NavigationItem>
-      <NavigationItem>contact</NavigationItem>
-    </NavigationWrapper>
+    <LogoWrapper>
+      <NavLink href="/">
+        <Logo src="/logoipsum-329.svg"></Logo>
+      </NavLink>
+    </LogoWrapper>
+
+    <NavWrapper>
+      <NavLink href="/about">about</NavLink>
+      <NavLink href="/contact">contact</NavLink>
+    </NavWrapper>
   </HeaderWrapper>
 );
 

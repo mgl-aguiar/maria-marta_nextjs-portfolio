@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-export const Grid = styled.main`
-  grid-area: main;
+export const Grid = styled.div`
   column-count: 1;
   column-gap: 2rem;
   width: 100%;
