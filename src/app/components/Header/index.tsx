@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+import { useTranslations } from 'next-intl';
+
 import {
   HeaderWrapper,
   LogoWrapper,
@@ -9,19 +11,23 @@ import {
   Logo,
 } from './Header.styles';
 
-const Header = () => (
-  <HeaderWrapper>
-    <LogoWrapper>
-      <NavLink href="/">
-        <Logo src="/logoipsum-329.svg"></Logo>
-      </NavLink>
-    </LogoWrapper>
+const Header = () => {
+  const t = useTranslations('Header');
 
-    <NavWrapper>
-      <NavLink href="/about">about</NavLink>
-      <NavLink href="/contact">contact</NavLink>
-    </NavWrapper>
-  </HeaderWrapper>
-);
+  return (
+    <HeaderWrapper>
+      <LogoWrapper>
+        <NavLink href="/">
+          <Logo src="/logoipsum-329.svg"></Logo>
+        </NavLink>
+      </LogoWrapper>
+
+      <NavWrapper>
+        <NavLink href="/about">{t('about')}</NavLink>
+        <NavLink href="/contact">{t('contact')}</NavLink>
+      </NavWrapper>
+    </HeaderWrapper>
+  );
+};
 
 export default Header;
