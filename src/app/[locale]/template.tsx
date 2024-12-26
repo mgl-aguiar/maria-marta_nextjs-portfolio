@@ -18,7 +18,6 @@ const PageWrapper = styled.div`
   background-color: whitesmoke; // placeholder
 `;
 
-
 const Main = styled.main`
   grid-area: main;
 `;

@@ -1,7 +1,7 @@
 'use client';
 
 import { ThemeProvider } from 'styled-components';
-import { NextIntlClientProvider } from 'next-intl';
+import { NextIntlClientProvider, AbstractIntlMessages } from 'next-intl';
 
 import StyledComponentsRegistry from '../lib/registry';
 import { theme } from '../styles/theme';
@@ -9,10 +9,10 @@ import { theme } from '../styles/theme';
 export default function ClientProviders({
   children,
   messages,
-  locale
+  locale,
 }: {
   children: React.ReactNode;
-  messages: any;
+  messages: AbstractIntlMessages;
   locale: string;
 }) {
   return (

@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import ClientProviders from './ClientProviders';
 
 import { routing } from '../../i18n/routing';
+import { Locale } from '@/src/types/i18n';
 
 import '../styles/globals.css';
 
@@ -12,9 +13,9 @@ export default async function LocaleLayout({
   params: { locale },
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: { locale: Locale };
 }) {
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale)) {
     notFound();
   }
 
