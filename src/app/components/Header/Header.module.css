@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: header;
+  margin: 2rem 0rem;
+}
+
+.logoWrapper {
+  font-size: 2rem;
+  font-weight: bold;
+  gap: 2rem;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.navWrapper {
+  display: flex;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.navLink {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #666;
+}

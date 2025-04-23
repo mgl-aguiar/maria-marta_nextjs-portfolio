@@ -2,14 +2,18 @@
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
-
-import { FooterWrapper } from './Footer.styles';
+import styles from './Footer.module.css';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
   const t = useTranslations('Footer');
 
-  return <FooterWrapper>{`© ${currentYear} — ${t('rights')}`}</FooterWrapper>;
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className={styles.footer}>
+      <p>{`© ${currentYear} — ${t('rights')}`}</p>
+    </footer>
+  );
 };
 
 export default Footer;
