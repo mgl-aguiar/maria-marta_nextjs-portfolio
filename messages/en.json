@@ -1,7 +1,7 @@
 {
   "Header": {
-    "about": "About",
-    "contact": "Contact"
+    "about": "about",
+    "contact": "contact"
   },
   "Footer": {
     "rights": "All rights reserved"

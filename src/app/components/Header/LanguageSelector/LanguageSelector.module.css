@@ -1,0 +1,52 @@
+/* Container <div> for the language selector */
+.dropdown {
+  position: relative;
+  margin-right: 2.5rem;
+}
+
+/* Button to open dropdown menu */
+.dropdownButton {
+  color: black;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem;
+}
+
+/* Dropdown Content */
+.dropdownContent {
+  display: none;
+  position: relative;
+  background-color: white;
+  color: black;
+  z-index: 2;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-top: 4.5rem;
+}
+
+/* Buttons in the dropdown content */
+.dropdownContent button {
+  cursor: pointer;
+  color: black;
+  font-size: 1rem;
+  font-weight: 700;
+  display: block;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Change color of dropdown button on hover */
+.dropdownContent button:hover {
+  color: grey;
+}
+
+/* Open dropdown menu and hides dropdown button on hover */
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+.dropdown:hover .dropdownButton {
+  display: none;
+}

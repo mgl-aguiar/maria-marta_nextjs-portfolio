@@ -1,0 +1,17 @@
+.logoWrapper {
+  font-size: 2rem;
+  font-weight: bold;
+  gap: 2rem;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 70px;
+  }
+}

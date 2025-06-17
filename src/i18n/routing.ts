@@ -6,7 +6,7 @@ const { EN, PT, ES } = Locale;
 
 export const routing = defineRouting({
   locales: [EN, PT, ES],
-  defaultLocale: PT,
+  defaultLocale: EN,
 });
 
 // Lightweight wrappers around Next.js' navigation APIs

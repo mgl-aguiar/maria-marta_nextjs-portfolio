@@ -4,6 +4,7 @@
   align-items: center;
   grid-area: header;
   margin: 2rem 0rem;
+  position: relative;
 }
 
 .logoWrapper {
@@ -15,12 +16,14 @@
 .logo {
   width: 100px;
   height: auto;
+  transition: width 0.3s ease;
 }
 
 .navWrapper {
   display: flex;
   font-size: 2rem;
   font-weight: bold;
+  gap: 2rem;
 }
 
 .navLink {
@@ -32,4 +35,33 @@
 
 .navLink:hover {
   color: #666;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 70px;
+  }
+
+  .navWrapper {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 5;
+  }
+
+  .navWrapper.active {
+    right: 0;
+  }
+
+  .navLink {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
 }

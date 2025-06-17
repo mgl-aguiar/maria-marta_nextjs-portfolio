@@ -1,5 +1,6 @@
-import ImageGrid from '../components/ImageGrid';
+import ArtworkGrid from '../components/ArtworkGrid';
+import { artworks } from '../data/artworks';
 
 export default function Home() {
-  return <ImageGrid />;
+  return <ArtworkGrid artworks={artworks} />;
 }
