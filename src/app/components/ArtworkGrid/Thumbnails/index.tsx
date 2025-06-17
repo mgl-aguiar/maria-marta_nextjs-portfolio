@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-const ImageThumb = () => {
+const Thumbnails = () => {
   return (
     <div>
       <Image src="/assets/thumb01.png" alt="Image 1" width={500} height={500} />
@@ -8,4 +8,4 @@ const ImageThumb = () => {
   );
 };
 
-export default ImageThumb;
+export default Thumbnails;
