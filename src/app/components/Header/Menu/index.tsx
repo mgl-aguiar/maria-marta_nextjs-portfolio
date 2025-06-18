@@ -22,9 +22,9 @@ const Menu: React.FC<MenuProps> = ({ isOpen, onToggle }) => {
         <Link href="/about" className={styles.navLink} onClick={onToggle}>
           {t('about')}
         </Link>
-        <Link href="/contact" className={styles.navLink} onClick={onToggle}>
+        {/* <Link href="/contact" className={styles.navLink} onClick={onToggle}>
           {t('contact')}
-        </Link>
+        </Link> */}
       </nav>
     </>
   );
