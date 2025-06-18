@@ -1,17 +1,25 @@
 .logoWrapper {
-  font-size: 2rem;
-  font-weight: bold;
-  gap: 2rem;
+  display: flex;
+  align-items: center;
 }
 
-.logo {
-  width: 100px;
-  height: auto;
-  transition: width 0.3s ease;
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logoText {
+  font-size: 3rem;
+  font-weight: 300;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
 }
 
 @media (max-width: 768px) {
-  .logo {
-    width: 70px;
+  .artistName {
+    font-size: 1.2rem;
   }
 }
