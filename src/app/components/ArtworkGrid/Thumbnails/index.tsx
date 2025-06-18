@@ -1,11 +1,29 @@
-import Image from 'next/image';
+'use client';
 
-const Thumbnails = () => {
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import styles from '../ArtworkGrid.module.css';
+import { Artwork } from '../../../data/artworks';
+
+interface ThumbnailProps {
+  artwork: Artwork;
+}
+
+const Thumbnail: React.FC<ThumbnailProps> = ({ artwork }) => {
   return (
-    <div>
-      <Image src="/assets/thumb01.png" alt="Image 1" width={500} height={500} />
-    </div>
+    <Link href={`/artwork/${artwork.id}`} className={styles.gridItem}>
+      <div className={styles.imageWrapper}>
+        <Image
+          src={artwork.thumbnailUrl}
+          alt={artwork.title}
+          width={500}
+          height={500}
+          className={styles.image}
+        />
+      </div>
+    </Link>
   );
 };
 
-export default Thumbnails;
+export default Thumbnail;
