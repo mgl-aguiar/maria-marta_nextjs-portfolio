@@ -1,7 +1,7 @@
-import { Alegreya } from 'next/font/google';
+import { Alegreya_Sans } from 'next/font/google';
 
-export const alegreya = Alegreya({
+export const alegreya = Alegreya_Sans({
   subsets: ['latin'],
-  display: 'swap',
+  weight: ['300', '400', '500', '700'],
   variable: '--font-alegreya',
 });
