@@ -5,5 +5,12 @@
   },
   "Footer": {
     "rights": "All rights reserved"
+  },
+  "Artwork": {
+    "dimensions": "Dimensions",
+    "media": "Media",
+    "year": "Year",
+    "series": "Series",
+    "location": "Location"
   }
 }

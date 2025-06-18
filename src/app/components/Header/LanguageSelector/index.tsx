@@ -30,7 +30,7 @@ export default function LanguageSelector() {
 
   return (
     <div className={styles.dropdown}>
-      <div className={styles.dropdownButton}>{currentLanguage.name}</div>
+      <div className={styles.dropdownButton}>{currentLanguage.code}</div>
       <div className={styles.dropdownContent}>
         {languageOptions.map((language) => (
           <button
