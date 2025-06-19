@@ -1,36 +1,36 @@
 /* Container <div> for the language selector */
 .dropdown {
   position: relative;
-  margin-right: 2.5rem;
+  /* margin-right: 2.5rem; */
 }
 
 /* Button to open dropdown menu */
 .dropdownButton {
-  color: black;
+  color: var(--color-text);
   border: none;
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 0.5rem;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  padding: var(--spacing-sm);
 }
 
 /* Dropdown Content */
 .dropdownContent {
   display: none;
   position: relative;
-  background-color: white;
-  color: black;
+  background-color: transparent;
+  color: var(--color-text);
   z-index: 2;
   border-radius: 0.5rem;
-  padding: 0.5rem;
-  margin-top: 4.5rem;
+  padding: var(--spacing-sm);
+  margin-top: 2.5rem;
 }
 
 /* Buttons in the dropdown content */
 .dropdownContent button {
   cursor: pointer;
-  color: black;
-  font-size: 1rem;
-  font-weight: 700;
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
   display: block;
   background-color: transparent;
   border: none;
@@ -39,7 +39,8 @@
 
 /* Change color of dropdown button on hover */
 .dropdownContent button:hover {
-  color: grey;
+  color: var(--color-hover);
+  text-decoration: underline;
 }
 
 /* Open dropdown menu and hides dropdown button on hover */

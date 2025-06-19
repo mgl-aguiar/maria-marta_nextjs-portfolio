@@ -1,9 +1,6 @@
 'use client';
 
-import { ThemeProvider } from 'styled-components';
 import { NextIntlClientProvider, AbstractIntlMessages } from 'next-intl';
-
-import { theme } from '../styles/theme';
 
 export default function ClientProviders({
   children,
@@ -16,7 +13,7 @@ export default function ClientProviders({
 }) {
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      {children}
     </NextIntlClientProvider>
   );
 }

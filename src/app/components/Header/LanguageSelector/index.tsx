@@ -39,7 +39,7 @@ export default function LanguageSelector() {
             value={language.code}
             onClick={() => handleLanguageChange(language.code)}
           >
-            {language.name}
+            {language.code}
           </button>
         ))}
       </div>
