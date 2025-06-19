@@ -1,12 +1,13 @@
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { alegreya } from '../lib/fonts';
+import { Locale } from '@/src/types/i18n';
 
 import ClientProviders from './ClientProviders';
 
-import { routing } from '../../i18n/routing';
-import { Locale } from '@/src/types/i18n';
+import '../globals.css';
 
-import '../styles/globals.css';
+const locales = [Locale.EN, Locale.PT, Locale.ES];
 
 export default async function LocaleLayout({
   children,
@@ -15,14 +16,14 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: Locale };
 }) {
-  if (!routing.locales.includes(locale)) {
+  if (!locales.includes(locale)) {
     notFound();
   }
 
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={alegreya.variable}>
       <body>
         <ClientProviders messages={messages} locale={locale}>
           {children}
