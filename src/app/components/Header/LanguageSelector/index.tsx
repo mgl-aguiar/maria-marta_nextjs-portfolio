@@ -28,7 +28,7 @@ export default function LanguageSelector() {
     }
 
     // If no language code found in URL, default to English
-    return languageOptions[0]; // English is first in the array
+    return languageOptions[0];
   };
 
   const currentLanguage = getCurrentLanguage();
