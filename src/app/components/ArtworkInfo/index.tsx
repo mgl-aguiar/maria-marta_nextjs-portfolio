@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styles from './ArtworkInfo.module.css';
-import { Artwork } from '../../data/artworks';
+import { Artwork } from '@/src/types/Artwork';
 import { useTranslations } from 'next-intl';
 
 interface ArtworkInfoProps {
@@ -12,38 +12,42 @@ interface ArtworkInfoProps {
 const ArtworkInfo: React.FC<ArtworkInfoProps> = ({ artwork }) => {
   const t = useTranslations('Artwork');
 
-  const details = {
-    dimensions: '100 x 150 cm',
-    media: 'Analog photography',
-    year: '2023',
-    series: 'Portraits',
-    location: 'Rio de Janeiro',
-  };
-
   return (
     <div className={styles.info}>
-      <h1 className={styles.title}>{artwork.title}</h1>
+      <h1 className={styles.title}>
+        {artwork.title ? artwork.title : 'Untitled'}
+      </h1>
       <div className={styles.details}>
-        <div className={styles.detailItem}>
-          <span className={styles.detailLabel}>{t('dimensions')}</span>
-          <span className={styles.detailValue}>{details.dimensions}</span>
-        </div>
-        <div className={styles.detailItem}>
-          <span className={styles.detailLabel}>{t('media')}</span>
-          <span className={styles.detailValue}>{details.media}</span>
-        </div>
-        <div className={styles.detailItem}>
-          <span className={styles.detailLabel}>{t('year')}</span>
-          <span className={styles.detailValue}>{details.year}</span>
-        </div>
-        <div className={styles.detailItem}>
-          <span className={styles.detailLabel}>{t('series')}</span>
-          <span className={styles.detailValue}>{details.series}</span>
-        </div>
-        <div className={styles.detailItem}>
-          <span className={styles.detailLabel}>{t('location')}</span>
-          <span className={styles.detailValue}>{details.location}</span>
-        </div>
+        {artwork.dimensions && (
+          <div className={styles.detailItem}>
+            <span className={styles.detailLabel}>{t('dimensions')}</span>
+            <span className={styles.detailValue}>{artwork.dimensions}</span>
+          </div>
+        )}
+        {artwork.media && (
+          <div className={styles.detailItem}>
+            <span className={styles.detailLabel}>{t('media')}</span>
+            <span className={styles.detailValue}>{artwork.media}</span>
+          </div>
+        )}
+        {artwork.year && (
+          <div className={styles.detailItem}>
+            <span className={styles.detailLabel}>{t('year')}</span>
+            <span className={styles.detailValue}>{artwork.year}</span>
+          </div>
+        )}
+        {artwork.series && (
+          <div className={styles.detailItem}>
+            <span className={styles.detailLabel}>{t('series')}</span>
+            <span className={styles.detailValue}>{artwork.series}</span>
+          </div>
+        )}
+        {artwork.location && (
+          <div className={styles.detailItem}>
+            <span className={styles.detailLabel}>{t('location')}</span>
+            <span className={styles.detailValue}>{artwork.location}</span>
+          </div>
+        )}
       </div>
     </div>
   );

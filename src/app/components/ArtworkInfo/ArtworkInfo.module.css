@@ -1,37 +1,36 @@
 .info {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding-top: 2rem;
+  gap: var(--spacing-lg);
 }
 
 .title {
   font-size: 2rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
+  font-weight: var(--font-weight-regular);
+  margin-bottom: var(--spacing-sm);
 }
 
 .details {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: var(--spacing-lg);
 }
 
 .detailItem {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--spacing-sm);
 }
 
 .detailLabel {
-  font-size: 0.9rem;
-  color: #666;
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .detailValue {
-  font-size: 1.1rem;
+  font-size: var(--font-size-base);
 }
 
 @media (max-width: 768px) {
@@ -40,6 +39,6 @@
   }
 
   .title {
-    font-size: 1.5rem;
+    font-size: var(--font-size-lg);
   }
 }
