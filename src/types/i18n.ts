@@ -10,7 +10,7 @@ export interface LanguageObject {
 }
 
 export const languageOptions: LanguageObject[] = [
-  { code: Locale.PT, name: 'Português' },
   { code: Locale.EN, name: 'English' },
+  { code: Locale.PT, name: 'Português' },
   { code: Locale.ES, name: 'Español' },
 ];

@@ -1,31 +1,59 @@
-import { useRouter, usePathname } from '@/src/i18n/routing';
+'use client';
+
+import { useRouter, usePathname } from 'next/navigation';
 import { languageOptions } from '@/src/types/i18n';
+
 import styles from './LanguageSelector.module.css';
 
-// TODO: Implement language selector
 export default function LanguageSelector() {
   const router = useRouter();
   const pathname = usePathname();
 
-  console.log('Current pathname:', pathname);
-
   // Get current language from the URL path
-  const currentLanguage =
-    languageOptions.find((lang) => pathname.startsWith(`/${lang.code}`)) ||
-    languageOptions[0];
+  const getCurrentLanguage = () => {
+    // Split the pathname and get the first segment
+    const pathSegments = pathname.split('/').filter(Boolean);
+
+    // If there's a first segment, check if it's a language code
+    if (pathSegments.length > 0) {
+      const firstSegment = pathSegments[0];
+      const language = languageOptions.find(
+        (lang) => lang.code === firstSegment
+      );
+
+      // If we found a language code, return it
+      if (language) {
+        return language;
+      }
+    }
+
+    // If no language code found in URL, default to English
+    return languageOptions[0]; // English is first in the array
+  };
+
+  const currentLanguage = getCurrentLanguage();
 
   const handleLanguageChange = (languageCode: string) => {
-    console.log('languageCode', languageCode);
+    // Get the path segments and remove the language code if present
+    const pathSegments = pathname.split('/').filter(Boolean);
+    const hasLanguagePrefix = languageOptions.some(
+      (lang) => lang.code === pathSegments[0]
+    );
 
-    // Get the base path without any locale prefix
-    const basePath = pathname.replace(/^\/[a-z]{2}(\/|$)/, '/');
+    // Remove language prefix if present
+    const pathWithoutLanguage = hasLanguagePrefix
+      ? pathSegments.slice(1)
+      : pathSegments;
+    const basePath =
+      pathWithoutLanguage.length > 0
+        ? `/${pathWithoutLanguage.join('/')}`
+        : '/';
 
-    // For non-default locale, add the prefix
+    // Construct new path
     const newPathname =
-      languageCode === 'pt' ? basePath : `/${languageCode}${basePath}`;
+      languageCode === 'en' ? basePath : `/${languageCode}${basePath}`;
 
-    console.log('New pathname:', newPathname);
-    router.replace(newPathname);
+    router.push(newPathname);
   };
 
   return (
