@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../ArtworkGrid.module.css';
-import { Artwork } from '../../../data/artworks';
+import { Artwork } from '@/src/types/Artwork';
 
 interface ThumbnailProps {
   artwork: Artwork;

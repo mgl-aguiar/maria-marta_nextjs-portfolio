@@ -3,9 +3,11 @@
 import React from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
 import HamburgerButton from '../../ui/HamburgerButton';
-import styles from './Menu.module.css';
 import LanguageSelector from '../LanguageSelector';
+
+import styles from './Menu.module.css';
 
 interface MenuProps {
   isOpen: boolean;
@@ -27,7 +29,7 @@ const Menu: React.FC<MenuProps> = ({ isOpen, onToggle }) => {
           {t('contact')}
         </Link>
         <a
-          href="https://instagram.com/mariamarta"
+          href="https://instagram.com/maria_marta.studio"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.navLink}

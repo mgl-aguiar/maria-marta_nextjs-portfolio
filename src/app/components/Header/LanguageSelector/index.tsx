@@ -9,7 +9,11 @@ export default function LanguageSelector() {
   const router = useRouter();
   const pathname = usePathname();
 
-  // Get current language from the URL path
+  const isMobile =
+    navigator.userAgent.includes('iPhone') ||
+    navigator.userAgent.includes('iPad') ||
+    navigator.userAgent.includes('Android');
+
   const getCurrentLanguage = () => {
     // Split the pathname and get the first segment
     const pathSegments = pathname.split('/').filter(Boolean);
@@ -32,6 +36,7 @@ export default function LanguageSelector() {
   };
 
   const currentLanguage = getCurrentLanguage();
+  const lastLanguageOption = languageOptions[languageOptions.length - 1].code;
 
   const handleLanguageChange = (languageCode: string) => {
     // Get the path segments and remove the language code if present
@@ -57,20 +62,43 @@ export default function LanguageSelector() {
   };
 
   return (
-    <div className={styles.dropdown}>
-      <div className={styles.dropdownButton}>{currentLanguage.code}</div>
-      <div className={styles.dropdownContent}>
-        {languageOptions.map((language) => (
-          <button
-            className={styles.dropdownContentButton}
-            key={language.code}
-            value={language.code}
-            onClick={() => handleLanguageChange(language.code)}
-          >
-            {language.code}
-          </button>
-        ))}
-      </div>
-    </div>
+    <>
+      {isMobile ? (
+        <div className={styles.mobileMenu}>
+          {languageOptions.map((language) => (
+            <>
+              <button
+                className={`${styles.mobileLanguageOptions} ${
+                  currentLanguage.code === language.code
+                    ? styles.selectedLanguage
+                    : ''
+                }`}
+                key={language.code}
+                value={language.code}
+                onClick={() => handleLanguageChange(language.code)}
+              >
+                {language.code}
+              </button>
+              {language.code !== lastLanguageOption && <span>|</span>}
+            </>
+          ))}
+        </div>
+      ) : (
+        <div className={styles.dropdown}>
+          <div className={styles.selectedLanguage}>{currentLanguage.code}</div>
+          <div className={styles.languageOptions}>
+            {languageOptions.map((language) => (
+              <button
+                key={language.code}
+                value={language.code}
+                onClick={() => handleLanguageChange(language.code)}
+              >
+                {language.code}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
   );
 }

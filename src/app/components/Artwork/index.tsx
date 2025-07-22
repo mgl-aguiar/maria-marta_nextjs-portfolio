@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './Artwork.module.css';
-import { Artwork as ArtworkData } from '../../data/artworks';
+import { Artwork as ArtworkData } from '@/src/types/Artwork';
 
 interface ArtworkProps {
   artwork: ArtworkData;

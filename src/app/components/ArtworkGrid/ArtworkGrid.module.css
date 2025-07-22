@@ -4,18 +4,21 @@
   width: 100%;
 }
 
+/* tablet */
 @media (min-width: 768px) {
   .grid {
     column-count: 2;
   }
 }
 
+/* desktop */
 @media (min-width: 1024px) {
   .grid {
     column-count: 3;
   }
 }
 
+/* large desktop */
 @media (min-width: 1440px) {
   .grid {
     column-count: 4;

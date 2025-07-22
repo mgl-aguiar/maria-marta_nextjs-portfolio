@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Artwork } from '../../data/artworks';
+import { Artwork } from '@/src/types/Artwork';
 import Thumbnail from './Thumbnails';
 import styles from './ArtworkGrid.module.css';
 

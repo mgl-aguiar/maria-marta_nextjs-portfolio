@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    'title title'
+    'text image';
+  gap: var(--spacing-2xl);
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.aboutTitle {
+  grid-area: title;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-medium);
+  /* line-height: 1.2; */
+  /* margin-bottom: var(--spacing-base); */
+}
+
+.aboutTextWrapper {
+  grid-area: text;
+}
+
+.aboutTextParagraph {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-md);
+}
+
+.aboutTextWrapper:last-child {
+  margin-bottom: 0;
+}
