@@ -3,6 +3,9 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
+
+import { getLocalizedPath } from '../../../lib/utils';
 import styles from '../ArtworkGrid.module.css';
 import { Artwork } from '@/src/types/Artwork';
 
@@ -11,8 +14,14 @@ interface ThumbnailProps {
 }
 
 const Thumbnail: React.FC<ThumbnailProps> = ({ artwork }) => {
+  const params = useParams();
+  const currentLocale = (params?.locale as string) || 'en';
+
   return (
-    <Link href={`/artwork/${artwork.id}`} className={styles.gridItem}>
+    <Link
+      href={getLocalizedPath(`/artwork/${artwork.id}`, currentLocale)}
+      className={styles.gridItem}
+    >
       <div className={styles.imageWrapper}>
         <Image
           src={artwork.thumbnailUrl}

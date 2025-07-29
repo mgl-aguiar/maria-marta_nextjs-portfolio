@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { scrollToTop } from '../../../lib/utils';
 import styles from './TopButton.module.css';
 
 const TopButton: React.FC = () => {
@@ -22,13 +23,6 @@ const TopButton: React.FC = () => {
       window.removeEventListener('scroll', toggleVisibility);
     };
   }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
 
   return (
     <>

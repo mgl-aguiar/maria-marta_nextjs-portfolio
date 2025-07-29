@@ -1,64 +1,26 @@
 'use client';
 
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter, usePathname, useParams } from 'next/navigation';
 import { languageOptions } from '@/src/types/i18n';
+import {
+  getCurrentLanguage,
+  handleLanguageChange,
+  isMobileDevice,
+} from '../../../lib/utils';
 
 import styles from './LanguageSelector.module.css';
 
 export default function LanguageSelector() {
   const router = useRouter();
   const pathname = usePathname();
+  const params = useParams();
 
-  const isMobile =
-    navigator.userAgent.includes('iPhone') ||
-    navigator.userAgent.includes('iPad') ||
-    navigator.userAgent.includes('Android');
-
-  const getCurrentLanguage = () => {
-    // Split the pathname and get the first segment
-    const pathSegments = pathname.split('/').filter(Boolean);
-
-    // If there's a first segment, check if it's a language code
-    if (pathSegments.length > 0) {
-      const firstSegment = pathSegments[0];
-      const language = languageOptions.find(
-        (lang) => lang.code === firstSegment
-      );
-
-      // If we found a language code, return it
-      if (language) {
-        return language;
-      }
-    }
-
-    // If no language code found in URL, default to English
-    return languageOptions[0];
-  };
-
-  const currentLanguage = getCurrentLanguage();
+  const isMobile = isMobileDevice();
+  const currentLanguage = getCurrentLanguage(params, pathname);
   const lastLanguageOption = languageOptions[languageOptions.length - 1].code;
 
-  const handleLanguageChange = (languageCode: string) => {
-    // Get the path segments and remove the language code if present
-    const pathSegments = pathname.split('/').filter(Boolean);
-    const hasLanguagePrefix = languageOptions.some(
-      (lang) => lang.code === pathSegments[0]
-    );
-
-    // Remove language prefix if present
-    const pathWithoutLanguage = hasLanguagePrefix
-      ? pathSegments.slice(1)
-      : pathSegments;
-    const basePath =
-      pathWithoutLanguage.length > 0
-        ? `/${pathWithoutLanguage.join('/')}`
-        : '/';
-
-    // Construct new path
-    const newPathname =
-      languageCode === 'en' ? basePath : `/${languageCode}${basePath}`;
-
-    router.push(newPathname);
+  const onLanguageChange = (languageCode: string) => {
+    handleLanguageChange(languageCode, pathname, router);
   };
 
   return (
@@ -75,7 +37,7 @@ export default function LanguageSelector() {
                 }`}
                 key={language.code}
                 value={language.code}
-                onClick={() => handleLanguageChange(language.code)}
+                onClick={() => onLanguageChange(language.code)}
               >
                 {language.code}
               </button>
@@ -91,7 +53,7 @@ export default function LanguageSelector() {
               <button
                 key={language.code}
                 value={language.code}
-                onClick={() => handleLanguageChange(language.code)}
+                onClick={() => onLanguageChange(language.code)}
               >
                 {language.code}
               </button>
