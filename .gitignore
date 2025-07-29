@@ -38,3 +38,6 @@ next-env.d.ts
 public/assets/artwork
 
 DEPLOYMENT_PLAN.md
+
+#cursor
+/.cursor/rules
