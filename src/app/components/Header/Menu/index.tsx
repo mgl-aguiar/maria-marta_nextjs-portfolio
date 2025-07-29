@@ -25,9 +25,11 @@ const Menu: React.FC<MenuProps> = ({ isOpen, onToggle }) => {
           {t('about')}
         </Link>
 
-        <Link href="/contact" className={styles.navLink}>
+        {/* TODO: setup contact page */}
+        {/* <Link href="/contact" className={styles.navLink}>
           {t('contact')}
-        </Link>
+        </Link> */}
+
         <a
           href="https://instagram.com/maria_marta.studio"
           target="_blank"
