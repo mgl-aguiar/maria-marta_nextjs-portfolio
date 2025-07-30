@@ -1,0 +1,25 @@
+.logoWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  text-decoration: none;
+  color: inherit;
+}
+
+.logoText {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-light);
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .logoText {
+    font-size: var(--font-size-3xl);
+  }
+}

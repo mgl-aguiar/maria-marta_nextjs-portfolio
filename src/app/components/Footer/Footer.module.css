@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: footer;
+  margin-top: 6rem;
+  border-top: 1px solid grey;
+}
+
+.navWrapper {
+  display: flex;
+  font-size: 2rem;
+  font-weight: bold;
+  gap: 2rem;
+}
