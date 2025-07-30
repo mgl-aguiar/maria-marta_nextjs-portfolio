@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { getBlobUrl } from '../../lib/blob-utils';
 import styles from './page.module.css';
 
 export default function About() {
@@ -19,7 +20,7 @@ export default function About() {
       </div>
       <div className={styles.aboutImageWrapper}>
         <Image
-          src="/assets/about_photo.png"
+          src={getBlobUrl('about_photo.png')}
           alt="Maria Marta - Artist Portrait"
           width={150}
           height={200}
