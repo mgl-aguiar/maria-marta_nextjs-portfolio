@@ -11,13 +11,6 @@ export default function About() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.aboutTextWrapper}>
-        {textParagraphs.map((paragraph, index) => (
-          <p key={index} className={styles.aboutTextParagraph}>
-            {paragraph}
-          </p>
-        ))}
-      </div>
       <div className={styles.aboutImageWrapper}>
         <Image
           src={getBlobUrl('about_photo.png')}
@@ -27,6 +20,13 @@ export default function About() {
           className={styles.aboutImage}
           priority
         />
+      </div>
+      <div className={styles.aboutTextWrapper}>
+        {textParagraphs.map((paragraph, index) => (
+          <p key={index} className={styles.aboutTextParagraph}>
+            {paragraph}
+          </p>
+        ))}
       </div>
     </div>
   );

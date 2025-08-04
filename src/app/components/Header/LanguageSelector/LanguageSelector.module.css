@@ -1,7 +1,6 @@
 /* Container <div> for the language selector */
 .dropdown {
   position: relative;
-  /* margin-right: 2.5rem; */
 }
 
 /* Button to open dropdown menu */
@@ -58,17 +57,20 @@
   background-color: transparent;
   color: var(--color-text-light);
   z-index: 2;
-  padding: var(--spacing-sm);
+  padding: 0;
 }
 
 .mobileLanguageOptions {
   background-color: transparent;
   border: none;
-  margin-left: var(--spacing-xs);
+  margin: var(--spacing-sm);
   cursor: pointer;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
   color: var(--color-text-light);
 }
 
 .mobileSelectedLanguage {
-  color: var(--color-text);
+  color: var(--color-accent);
+  text-decoration: underline;
 }

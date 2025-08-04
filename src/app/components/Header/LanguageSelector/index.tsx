@@ -32,7 +32,7 @@ export default function LanguageSelector() {
               <button
                 className={`${styles.mobileLanguageOptions} ${
                   currentLanguage.code === language.code
-                    ? styles.selectedLanguage
+                    ? styles.mobileSelectedLanguage
                     : ''
                 }`}
                 key={language.code}

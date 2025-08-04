@@ -43,7 +43,7 @@ const Menu: React.FC<MenuProps> = ({ isOpen, onToggle }) => {
           rel="noopener noreferrer"
           className={styles.navLink}
         >
-          Instagram
+          instagram
         </a>
         <LanguageSelector />
       </nav>
