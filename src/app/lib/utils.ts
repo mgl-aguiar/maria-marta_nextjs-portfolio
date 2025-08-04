@@ -2,6 +2,7 @@
  * Utility functions for the application
  */
 
+import { Media } from '@/src/types/Artwork';
 import { languageOptions, LanguageObject } from '@/src/types/i18n';
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 
@@ -111,4 +112,21 @@ export const scrollToTop = () => {
     top: 0,
     behavior: 'smooth',
   });
+};
+
+export const getMediaTranslationString = (media: Media) => {
+  switch (media) {
+    case Media.DIGITAL_PRINT:
+      return 'digitalPrint';
+    case Media.COLOUR_FILM:
+      return 'colourFilm';
+    case Media.BLACK_AND_WHITE_FILM:
+      return 'blackAndWhiteFilm';
+    case Media.WATERCOLOUR:
+      return 'watercolour';
+    case Media.INK:
+      return 'ink';
+    case Media.SILVER_GELATIN:
+      return 'silverGelatin';
+  }
 };

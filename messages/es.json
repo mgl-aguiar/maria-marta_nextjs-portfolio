@@ -6,14 +6,15 @@
   "Footer": {
     "rights": "Todos los derechos reservados"
   },
-  "Artwork": {
-    "dimensions": "Dimensiones",
-    "media": "Medio",
-    "year": "Año",
-    "series": "Serie",
-    "location": "Ubicación"
-  },
   "About": {
     "text": "Como artista multidisciplinar, combinando una década de experiencia en diseño de producción dentro de la industria cinematográfica y una sólida formación en bellas artes, exploro conexiones entre materialidad y significado a través de narrativas personales y memoria colectiva.\n\nNacida en Brasil y radicada en los Países Bajos, mi práctica refleja transiciones culturales y políticas, examinando pertenencia a través de la naturaleza poco confiable de la memoria y el terreno cambiante de la identidad. Trabajando a través de videoarte, fotografía y medios mixtos, investigo el diálogo entre formas efímeras y tangibles.\n\nMi proceso artístico a menudo comienza con la fisicalidad de los materiales — ya sea el grano de la película, la fluidez de la acuarela, o los aspectos en capas del collage. Estos elementos cuentan historias, conectando el pasado y el presente, lo visto y lo imaginado.\n\nAbordo cada proyecto con un enfoque en la narrativa visual, luz, composición y movimiento para evocar emoción y provocar pensamiento. Últimamente, estoy explorando cómo las imágenes pueden cambiar nuestra conexión con la memoria, el espacio y el tiempo - invitando nuevas formas de ver nuestro mundo."
+  },
+  "Media": {
+    "digitalPrint": "impresión digital",
+    "silverGelatin": "impresión en gelatina de plata",
+    "colourFilm": "película de color",
+    "blackAndWhiteFilm": "película en blanco y negro",
+    "watercolour": "acuarela",
+    "ink": "tinta"
   }
 }

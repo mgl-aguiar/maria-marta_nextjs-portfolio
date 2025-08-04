@@ -1,9 +1,9 @@
-.logoWrapper {
+.titleWrapper {
   display: flex;
   align-items: center;
 }
 
-.logoLink {
+.titleLink {
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
@@ -11,7 +11,7 @@
   color: inherit;
 }
 
-.logoText {
+.titleText {
   font-size: var(--font-size-4xl);
   font-weight: var(--font-weight-light);
   white-space: nowrap;
@@ -19,7 +19,7 @@
 }
 
 @media (max-width: 768px) {
-  .logoText {
+  .titleText {
     font-size: var(--font-size-3xl);
   }
 }

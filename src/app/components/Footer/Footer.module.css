@@ -3,13 +3,8 @@
   justify-content: center;
   align-items: center;
   grid-area: footer;
-  margin-top: 6rem;
+  margin: 1rem 1rem 0 1rem;
   border-top: 1px solid grey;
-}
-
-.navWrapper {
-  display: flex;
-  font-size: 2rem;
-  font-weight: bold;
-  gap: 2rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-light);
 }

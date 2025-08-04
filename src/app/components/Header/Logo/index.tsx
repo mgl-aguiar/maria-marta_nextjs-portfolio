@@ -12,12 +12,12 @@ const Logo = () => {
   const currentLocale = (params?.locale as string) || 'en';
 
   return (
-    <div className={styles.logoWrapper}>
+    <div className={styles.titleWrapper}>
       <Link
         href={getLocalizedPath('/', currentLocale)}
-        className={styles.logoLink}
+        className={styles.titleLink}
       >
-        <span className={styles.logoText}>Maria Marta</span>
+        <span className={styles.titleText}>Maria Marta</span>
       </Link>
     </div>
   );

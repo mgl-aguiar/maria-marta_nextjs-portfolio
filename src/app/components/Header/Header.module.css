@@ -3,20 +3,8 @@
   justify-content: space-between;
   align-items: center;
   grid-area: header;
-  margin: 2rem 0rem;
+  margin: var(--spacing-md) 0rem;
   position: relative;
-}
-
-.logoWrapper {
-  font-size: 2rem;
-  font-weight: bold;
-  gap: 2rem;
-}
-
-.logo {
-  width: 100px;
-  height: auto;
-  transition: width 0.3s ease;
 }
 
 .navWrapper {
@@ -37,9 +25,10 @@
   color: #666;
 }
 
+/* mobile */
 @media (max-width: 768px) {
-  .logo {
-    width: 70px;
+  .header {
+    margin: var(--spacing-md);
   }
 
   .navWrapper {
