@@ -15,6 +15,18 @@
   grid-area: main;
 }
 
+/* tablet */
+@media (min-width: 768px) {
+  .pageWrapper {
+    grid-template-columns: 1fr 20fr 1fr;
+    grid-template-rows: 10rem auto 16rem;
+    grid-template-areas:
+      '. header .'
+      '. main .'
+      '. footer .';
+  }
+}
+
 /* desktop */
 @media (min-width: 1024px) {
   .pageWrapper {

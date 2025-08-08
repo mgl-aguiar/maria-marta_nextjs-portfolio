@@ -3,8 +3,28 @@
   justify-content: center;
   align-items: center;
   grid-area: footer;
-  margin: 1rem 1rem 0 1rem;
   border-top: 1px solid grey;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-light);
+  margin-top: var(--spacing-md);
+  margin-right: var(--spacing-md);
+  margin-bottom: 0;
+  margin-left: var(--spacing-md);
+}
+
+/* tablet */
+@media (min-width: 768px) {
+  .footer {
+    margin-top: var(--spacing-2xl);
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+  .footer {
+    margin-top: var(--spacing-3xl);
+  }
 }
