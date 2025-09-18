@@ -7,7 +7,7 @@
     "rights": "Todos los derechos reservados"
   },
   "About": {
-    "text": "Como artista multidisciplinar, combinando una década de experiencia en diseño de producción dentro de la industria cinematográfica y una sólida formación en bellas artes, exploro conexiones entre materialidad y significado a través de narrativas personales y memoria colectiva.\n\nNacida en Brasil y radicada en los Países Bajos, mi práctica refleja transiciones culturales y políticas, examinando pertenencia a través de la naturaleza poco confiable de la memoria y el terreno cambiante de la identidad. Trabajando a través de videoarte, fotografía y medios mixtos, investigo el diálogo entre formas efímeras y tangibles.\n\nMi proceso artístico a menudo comienza con la fisicalidad de los materiales — ya sea el grano de la película, la fluidez de la acuarela, o los aspectos en capas del collage. Estos elementos cuentan historias, conectando el pasado y el presente, lo visto y lo imaginado.\n\nAbordo cada proyecto con un enfoque en la narrativa visual, luz, composición y movimiento para evocar emoción y provocar pensamiento. Últimamente, estoy explorando cómo las imágenes pueden cambiar nuestra conexión con la memoria, el espacio y el tiempo - invitando nuevas formas de ver nuestro mundo."
+    "text": "Maria Marta es una artista multidisciplinaria que une la experiencia de una década en dirección de arte en la industria cinematográfica con su formación en bellas artes por la Hogeschool voor de Kunsten Utrecht (HKU) para desarrollar trabajos, especialmente en videoarte, fotografía y medios mixtos, que investiguen el diálogo entre formas efímeras, pero aún así tangibles.\n\nLas especificidades de colores, texturas y paisajes en cada imagen reflejan las transiciones culturales y políticas, con sus fricciones y encajes, evidenciando la dualidad entre el lugar de origen, Río de Janeiro, Brasil, y la nueva residencia en los Países Bajos. Al examinar la noción de pertenencia por medio de la naturaleza imprecisa de la memoria y el terreno cambiante de la identidad, sus trabajos tocan puntos vitales que permean las discusiones sobre feminismo y extranjerismo.\n\nSu proceso artístico, en general, comienza con la fisicalidad de los materiales – sea el grano de la película, la fluidez de la acuarela o la textura de las plantas. Estos elementos cuentan historias, conectando el pasado y el presente, lo visto y lo imaginado. Finalmente, la narrativa visual, la luz, la composición y el movimiento evocan las sensaciones y provocan el pensamiento.\n\nSu investigación actual busca entender cómo las imágenes pueden alterar nuestra conexión con la memoria, y cómo esta evidencia la permeabilidad, el nudo, existente entre espacio y tiempo, de modo a crear formas aún inexistentes y presentarlas a nuestro mundo, invitándonos a percibirlo desde otra perspectiva."
   },
   "Media": {
     "digitalPrint": "impresión digital",
@@ -15,6 +15,9 @@
     "colourFilm": "película de color",
     "blackAndWhiteFilm": "película en blanco y negro",
     "watercolour": "acuarela",
-    "ink": "tinta"
+    "ink": "tinta",
+    "pencil": "lápiz",
+    "pastel": "pastel",
+    "other": "otro"
   }
 }

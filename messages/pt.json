@@ -7,7 +7,7 @@
     "rights": "Todos os direitos reservados"
   },
   "About": {
-    "text": "Como artista multidisciplinar, combinando uma década de experiência em design de produção na indústria cinematográfica e uma sólida formação em belas artes, exploro conexões entre materialidade e significado através de narrativas pessoais e memória coletiva.\n\nNascida no Brasil e radicada na Holanda, minha prática reflete transições culturais e políticas, examinando pertencimento através da natureza não confiável da memória e do terreno em mudança da identidade. Trabalhando com videoarte, fotografia e mídia mista, investigo o diálogo entre formas efêmeras e tangíveis.\n\nMeu processo artístico frequentemente começa com a fisicalidade dos materiais — seja o grão do filme, a fluidez da aquarela ou os aspectos em camadas da colagem. Esses elementos contam histórias, conectando o passado e o presente, o visto e o imaginado.\n\nAbordo cada projeto com foco na narrativa visual, luz, composição e movimento para evocar emoção e provocar pensamento. Ultimamente, estou explorando como as imagens podem alterar nossa conexão com memória, espaço e tempo - convidando novas formas de ver nosso mundo."
+    "text": "Maria Marta é uma artista multidisciplinar que une a experiência de uma década em direção de arte na indústria cinematográfica com sua formação em belas-artes pela Hogeschool voor de Kunsten Utrecht (HKU) para desenvolver trabalhos, especialmente, em videoarte, fotografia e mídia mista, que investiguem o diálogo entre formas efêmeras, mas, ainda assim, tangíveis.\n\nAs especificidades de cores, texturas e paisagens em cada imagem refletem as transições culturais e políticas, com suas fricções e encaixes, evidenciando a dualidade entre o lugar de origem, Rio de Janeiro, Brasil, e a nova residência nos Países Baixos. Ao examinar a noção de pertencimento por meio da natureza imprecisa da memória e do terreno em mudança da identidade, seus trabalhos esbarram em pontos vitais que permeiam as discussões sobre feminismo e estrangeirismo.\n\nSeu processo artístico, em geral, começa com a fisicalidade dos materiais – seja o grão do filme, a fluidez da aquarela ou a textura das plantas. Esses elementos contam histórias, conectando o passado e o presente, o visto e o imaginado. Por fim, a narrativa visual, a luz, a composição e o movimento evocam as sensações e provocam o pensamento.\n\nA sua pesquisa atual busca entender como as imagens podem alterar a nossa conexão com a memória, e como esta evidencia a permeabilidade, o nó, existente entre espaço e tempo, de modo a criar formas ainda inexistentes e apresentá-las ao nosso mundo, convidando-nos a percebê-lo por outro viés.\n\nA sua pesquisa atual busca entender como as imagens podem alterar a nossa conexão com a memória, e como esta evidencia a permeabilidade, o nó, existente entre espaço e tempo, de modo a criar formas ainda inexistentes e apresentá-las ao nosso mundo, convidando-nos a percebê-lo por outro viés."
   },
   "Media": {
     "digitalPrint": "impressão digital",
@@ -15,6 +15,9 @@
     "colourFilm": "filme colorido",
     "blackAndWhiteFilm": "filme em preto e branco",
     "watercolour": "aquarela",
-    "ink": "tinta"
+    "ink": "tinta",
+    "pencil": "lápis",
+    "pastel": "pastel",
+    "other": "outro"
   }
 }
