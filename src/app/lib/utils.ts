@@ -128,5 +128,9 @@ export const getMediaTranslationString = (media: Media) => {
       return 'ink';
     case Media.SILVER_GELATIN:
       return 'silverGelatin';
+    case Media.VIDEO:
+      return 'video';
+    case Media.OTHER:
+      return 'other';
   }
 };

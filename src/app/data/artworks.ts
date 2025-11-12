@@ -4,6 +4,18 @@ import { getBlobUrl } from '../lib/blob-utils';
 // temporary, until we have a real DB
 export const artworks: Artwork[] = [
   {
+    id: '50',
+    title: 'Forest Baby',
+    imageUrl: 'https://www.youtube.com/embed/dfNmbqeLHr8?si=b9zuiLOQka96SEmf',
+    thumbnailUrl: getBlobUrl('thumbnails/forestBaby.png'),
+    description: 'Music video for the song "Forest Baby" by "Vovô Bebê".', // TODO: translate
+    dimensions: '',
+    media: 'video',
+    year: '2025',
+    series: '',
+    location: '',
+  },
+  {
     id: '1',
     title: 'Aterro',
     imageUrl: getBlobUrl('artworks/aterro1.png'),
