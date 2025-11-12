@@ -22,9 +22,13 @@ const ArtworkInfo: React.FC<ArtworkInfoProps> = ({ artwork }) => {
       <h1 className={styles.title}>
         {artwork.title ? artwork.title : 'Untitled'}
       </h1>
+      <p className={styles.details}>
+        {artwork.description && artwork.description}
+      </p>
       <p className={styles.details}>{artwork.media && `${t(mediaString)}`}</p>
       <p className={styles.details}>
-        {artwork.location && `${artwork.location}, ${artwork.year}`}
+        {artwork.location && `${artwork.location},`}{' '}
+        {artwork.year && `${artwork.year}`}
       </p>
     </div>
   );

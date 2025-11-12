@@ -3,6 +3,7 @@ export interface Artwork {
   title: string;
   imageUrl: string;
   thumbnailUrl: string;
+  description?: string;
   dimensions?: string;
   media?: string;
   year?: string;
@@ -17,5 +18,6 @@ export enum Media {
   WATERCOLOUR = 'watercolour',
   INK = 'ink',
   SILVER_GELATIN = 'silver gelatin print  ',
+  VIDEO = 'video',
   OTHER = 'other',
 }

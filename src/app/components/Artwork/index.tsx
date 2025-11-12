@@ -10,6 +10,22 @@ interface ArtworkProps {
 }
 
 const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
+  // this is a temporary solution to display videos:
+  if (artwork.media === 'video') {
+    return (
+      <div className={styles.videoWrapper}>
+        <iframe
+          src={artwork.imageUrl}
+          title={artwork.title}
+          width="1000"
+          height="800"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </div>
+    );
+  }
   return (
     <div className={styles.imageWrapper}>
       <Image
