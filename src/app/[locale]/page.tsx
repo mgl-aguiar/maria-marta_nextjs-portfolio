@@ -2,10 +2,16 @@ import ArtworkGrid from '../components/ArtworkGrid';
 import TopButton from '../components/ui/TopButton';
 import { artworks } from '../data/artworks';
 
-export default function Home() {
+interface HomeProps {
+  params: {
+    locale: string;
+  };
+}
+
+export default function Home({ params }: HomeProps) {
   return (
     <>
-      <ArtworkGrid artworks={artworks} />
+      <ArtworkGrid artworks={artworks} locale={params.locale} />
       <TopButton />
     </>
   );

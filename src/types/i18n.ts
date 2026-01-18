@@ -4,6 +4,9 @@ export enum Locale {
   ES = 'es',
 }
 
+export const locales = [Locale.EN, Locale.PT, Locale.ES] as const;
+export const defaultLocale = Locale.EN;
+
 export interface LanguageObject {
   code: Locale;
   name: string;
