@@ -1,5 +1,6 @@
 'use client';
 
+import { Fragment } from 'react';
 import { useRouter, usePathname, useParams } from 'next/navigation';
 import { languageOptions } from '@/src/types/i18n';
 import {
@@ -28,21 +29,20 @@ export default function LanguageSelector() {
       {isMobile ? (
         <div className={styles.mobileMenu}>
           {languageOptions.map((language) => (
-            <>
+            <Fragment key={language.code}>
               <button
                 className={`${styles.mobileLanguageOptions} ${
                   currentLanguage.code === language.code
                     ? styles.mobileSelectedLanguage
                     : ''
                 }`}
-                key={language.code}
                 value={language.code}
                 onClick={() => onLanguageChange(language.code)}
               >
                 {language.code}
               </button>
               {language.code !== lastLanguageOption && <span>|</span>}
-            </>
+            </Fragment>
           ))}
         </div>
       ) : (

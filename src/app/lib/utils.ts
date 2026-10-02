@@ -114,7 +114,7 @@ export const scrollToTop = () => {
   });
 };
 
-export const getMediaTranslationString = (media: Media) => {
+export const getMediaTranslationString = (media: Media): string => {
   switch (media) {
     case Media.DIGITAL_PRINT:
       return 'digitalPrint';

@@ -1,6 +1,5 @@
-'use client';
-
-import React from 'react';
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { artworks } from '../../../data/artworks';
 import Artwork from '../../../components/Artwork';
 import ArtworkInfo from '../../../components/ArtworkInfo';
@@ -13,11 +12,33 @@ interface ArtworkPageProps {
   };
 }
 
-const ArtworkPage: React.FC<ArtworkPageProps> = ({ params }) => {
+export async function generateMetadata({
+  params,
+}: ArtworkPageProps): Promise<Metadata> {
   const artwork = artworks.find((art) => art.id === params.id);
 
   if (!artwork) {
-    return <div>Artwork not found</div>;
+    return {
+      title: 'Artwork Not Found',
+    };
+  }
+
+  return {
+    title: artwork.title,
+    description: artwork.description || `${artwork.title} by Maria Marta`,
+    openGraph: {
+      title: artwork.title,
+      description: artwork.description || `${artwork.title} by Maria Marta`,
+      images: artwork.media !== 'video' ? [artwork.imageUrl] : undefined,
+    },
+  };
+}
+
+export default function ArtworkPage({ params }: ArtworkPageProps) {
+  const artwork = artworks.find((art) => art.id === params.id);
+
+  if (!artwork) {
+    notFound();
   }
 
   return (
@@ -26,6 +47,4 @@ const ArtworkPage: React.FC<ArtworkPageProps> = ({ params }) => {
       <ArtworkInfo artwork={artwork} />
     </div>
   );
-};
-
-export default ArtworkPage;
+}
